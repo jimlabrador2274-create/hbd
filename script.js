@@ -41,7 +41,7 @@
   $('claim').addEventListener('click',function(){
     if(!claimed){
       claimed=true;$('mt').textContent='Selamat, kamu menang';
-      $('mp').textContent='Satu kali traktir makan malam. Kamu yang pilih tempatnya.';
+      $('mp').textContent='Hadiahmu: top up Free Fire.';
       $('claim').textContent='Tutup';burst(140,.45);
     }else{modal.hidden=true}
   });

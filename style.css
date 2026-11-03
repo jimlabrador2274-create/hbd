@@ -30,6 +30,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Outfit',system-
 #bal{filter:drop-shadow(0 0 10px rgba(255,77,121,.35))}
 .scene h1{font-size:clamp(3rem,15vw,5.2rem);line-height:1.1;margin:8px 0 4px;color:var(--ink);opacity:0}
 .go h1{animation:fade 1.4s 3.2s forwards}
+.nm{display:block;font-size:clamp(1.4rem,6.2vw,2.1rem);line-height:1.25;color:var(--soft);margin-top:10px}
 .scene .hint{opacity:0}
 .go .hint{animation:fade 1s 4.2s forwards}
 @keyframes fade{to{opacity:1}}
