@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ada hadiah untukmu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+
+<button class="intro" id="intro" type="button">
+  <p class="script">a little something, for you</p>
+  <svg class="heart" viewBox="0 0 100 90" aria-hidden="true">
+    <defs><radialGradient id="g" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffb3c6"/><stop offset=".5" stop-color="#ff4d79"/><stop offset="1" stop-color="#c81e4f"/></radialGradient></defs>
+    <path d="M50 86C10 56 0 36 0 22 0 9 11 0 25 0c11 0 20 6 25 15C55 6 64 0 75 0c14 0 25 9 25 22 0 14-10 34-50 64z" fill="url(#g)"/>
+  </svg>
+  <span class="hint">ketuk hatinya untuk membuka</span>
+</button>
+
+<div id="app" hidden>
+  <section class="scene">
+    <svg id="tree" viewBox="0 0 400 500" role="img" aria-label="Pohon dengan balon berbentuk hati">
+      <g stroke-width="9"><path class="tr" pathLength="1" d="M200 500C198 430 204 370 200 290" style="--t:0s"/></g>
+      <g stroke-width="5">
+        <path class="tr" pathLength="1" d="M201 380C182 352 164 342 146 322" style="--t:1s"/>
+        <path class="tr" pathLength="1" d="M201 352C224 328 244 318 262 298" style="--t:1.2s"/>
+        <path class="tr" pathLength="1" d="M200 290C199 270 200 252 200 232" style="--t:1.4s"/>
+      </g>
+      <g id="bal"></g>
+    </svg>
+    <h1 class="script">Happy Birthday</h1>
+    <p class="hint">gulir ke bawah</p>
+  </section>
+
+  <main>
+    <section class="gal">
+      <h2 class="serif">Blooming Wishes</h2>
+      <div class="tiles">
+        <label class="tile"><input type="file" accept="image/*" aria-label="Pasang foto 1"><span>+ foto</span></label>
+        <label class="tile"><input type="file" accept="image/*" aria-label="Pasang foto 2"><span>+ foto</span></label>
+        <label class="tile"><input type="file" accept="image/*" aria-label="Pasang foto 3"><span>+ foto</span></label>
+      </div>
+      <p class="hint">Ketuk kotak untuk memasang fotomu. Foto hanya tampil di perangkat ini.</p>
+    </section>
+
+    <article class="card">
+      <svg class="mark" viewBox="0 0 100 90" aria-hidden="true"><path d="M50 86C10 56 0 36 0 22 0 9 11 0 25 0c11 0 20 6 25 15C55 6 64 0 75 0c14 0 25 9 25 22 0 14-10 34-50 64z" fill="#ff4d79"/></svg>
+      <h2 class="serif">Selamat Ulang Tahun <span contenteditable="true" spellcheck="false" id="to">Sayang</span></h2>
+      <div class="msg" contenteditable="true" spellcheck="false">
+        <p>Hari ini bukan hanya soal bertambahnya usia, tapi soal betapa bersyukurnya aku punya kamu.</p>
+        <p>Semoga sehat selalu, bahagia selalu, dan semua yang kamu impikan satu per satu jadi nyata.</p>
+        <p>Terima kasih sudah jadi tempat pulang yang paling nyaman.</p>
+        <p>Aku akan terus ada di sampingmu, di tahun ini dan tahun-tahun berikutnya.</p>
+      </div>
+      <div class="sign script" contenteditable="true" spellcheck="false">Muhammad Alfino Dwi Putra</div>
+      <button class="pill" id="gift" type="button">Kirim hadiah</button>
+    </article>
+  </main>
+</div>
+
+<div id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="box">
+    <div class="gift" aria-hidden="true">🎁</div>
+    <h3 class="serif" id="mt">Hadiah spesial untukmu</h3>
+    <p id="mp">Ada kejutan kecil yang sudah disiapkan. Ambil sekarang.</p>
+    <button class="pill" id="claim" type="button">Ambil hadiah</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
